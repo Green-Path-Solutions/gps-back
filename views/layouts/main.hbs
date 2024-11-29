@@ -11,6 +11,13 @@
 </head>
 <body>
 
+{{#if registered}}
+        <div class="success-message">
+            <p>¡Registrado correctamente! Ahora puedes iniciar sesión.</p>
+        </div>
+    {{/if}}
+ 
+
             <div class="contenedor-login">
                 {{{body}}} 
             </div>

@@ -43,32 +43,30 @@ const register = async (req, res) => {
         const usuarioCreado = await models.crearUsuario(usuario)
         console.log(usuarioCreado)
 
-        const objRespuesta = {
-            name: usuarioCreado.name,
-            email: usuarioCreado.email,
-            id: usuarioCreado._id
-        }
+        // const objRespuesta = {
+        //     name: usuarioCreado.name,
+        //     email: usuarioCreado.email,
+        //     id: usuarioCreado._id
+        // }
 
-        res.json(objRespuesta)
+        // res.json(objRespuesta)
+
+        res.redirect('/api/auth/login?registered=true');
+
     } catch (error) {
         console.log('[register]', error)
         res.status(500).json({mensaje: 'No se pudo registrar el usuario'})
     }
 }
 const showAuthFormLogin = (req, res) => {
-    res.render('usuarios/login')
+    const registered = req.query.registered === 'true';
+    res.render('usuarios/login', { registered })
 }
 
 // const login = passport.authenticate('local', {
+//     successRedirect: 'http://localhost:5173/index.html',
 //     failureRedirect: '/api/auth/login'
 // })
-
-// const login = (req,res) => {
-//     console.log(req.body);
-
-//     res.send('login')
-// }
-
 
 const login = (req, res, next) => {
     passport.authenticate('local', (err, user, info) => {
@@ -76,16 +74,19 @@ const login = (req, res, next) => {
             return next(err);
         }
         if (!user) {
-            return res.status(400).json({ mensaje: info.message || 'Fallo en la autenticación' });
+            return res.redirect('/api/auth/login');
         }
         req.logIn(user, (err) => {
             if (err) {
                 return next(err);
             }
-            return res.json({ mensaje: 'Inicio de sesión exitoso' });
+            // Almacena el nombre del usuario en la sesión
+            req.session.userName = user.name;
+            return res.redirect('http://localhost:5173/index.html');
         });
     })(req, res, next);
 };
+
 
 const logout = (req, res) => {
     req.logout();

@@ -11,8 +11,7 @@ import path from 'path'
 
 import routerUsuarios from './routers/usuarios.router.js'
 import handleConnection from './utils/handle-connection.js'
-import './utils/handle-passport.js'
-
+import * as passportStrategy from './utils/handle-passport.js'
 
 // ! Constantes/Variables
 const app = express();
@@ -55,7 +54,7 @@ app.use(
     secret: SECRET_SESSION,
     resave: false,
     saveUninitialized: false,
-    store: MongoStore.create({ mongoUrl: MONGO_REMOTO }),
+    store: MongoStore.create({ mongoUrl: MONGO_LOCAL }),
   })
 );
 

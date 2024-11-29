@@ -22,4 +22,9 @@ routerUsuarios.post('/api/auth/login', usuariosController.login);
 // http://localhost:8080/api/auth/logout
 routerUsuarios.get('/api/auth/logout', usuariosController.logout);
 
+// ? Ruta para obtener la sesión del usuario
+routerUsuarios.get('/api/auth/session', (req, res) => {
+    res.json({ userName: req.session.userName || null });
+});
+
 export default routerUsuarios;

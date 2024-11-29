@@ -1,3 +1,5 @@
+
+
 <div class="contenedor-chill">    
             
  <form  action="/api/auth/login" method="POST" class="login-form" id="login-form">
@@ -51,3 +53,12 @@
         </form>
          </div>
         </div>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('registered')) {
+                alert('¡Registrado correctamente! Ahora podes iniciar sesión.');
+            }
+        });
+    </script>
