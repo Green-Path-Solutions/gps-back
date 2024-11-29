@@ -1,0 +1,240 @@
+/* ------------------------------------------------------------ Fondo Login  */
+
+.contenedor-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(/img/top-view.jpg) no-repeat;
+    background-size:cover;
+    background-position: center;
+} 
+
+/* --------------------------------------------------------------- Formato box */
+
+.form-box-login img {
+    width: 65%;
+    margin-top: -1rem;
+}
+
+.form-box-register img {
+    width: 15%;
+    
+}
+
+.contenedor-chill {
+    position: relative;
+    text-align: center;
+    width: 450px;
+    height: 600px;
+    padding: 40px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    /* background-color: rgb(126, 118, 112); */
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+ /* ------------------------------------------------------------ formato input */
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 3px solid var(--color1);
+    border-image-slice: 1;
+    margin: 30px 0;
+}
+
+.input-box label, 
+.input-box-register label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: var(--color5);
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label,
+.input-box-register input:focus~label,
+.input-box-register input:valid~label {
+    top: -5px;
+}
+
+.input-box input,
+.input-box-register input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    color: var(--color0);
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+ /* ------------------------------------------------------------ iconos */
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.6rem;
+    color: var(--color6);
+    line-height: 50px;
+}
+
+/* ----------------------------------------------------------- seguir conectado y olv contra */
+.remember {
+    font-size: 1.6rem;
+    color: var(--color6);
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    /* text-align: left; */
+}
+
+
+.remember label input {
+    margin-right: 5px;
+    accent-color: var(--color1);
+    cursor: pointer;
+}
+
+.conected {
+    margin-top: -10px;
+}
+
+/* ------------------------------------------------------------ botones */
+.button-section {
+    padding-top: 30px;
+    margin: 20px;
+}
+
+.btn {
+    display: block;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--color5);
+    margin: 10px 0 0 0;
+}
+
+.btn-inicio:hover,
+.google-access:hover {
+    transform: scale(1.1);
+    transition: all 300ms ease;
+}
+
+.btn-inicio {
+    width: 100%;
+    background-color: var(--color1);
+}
+
+.btn-inicio .enviar-register {
+    text-decoration: none;
+    color: var(--color5);
+}
+
+.btn-google {
+    background-color: var(--color5);
+    color: var(--color3);
+    width: 90%;
+    text-decoration: none;
+}
+
+.google-access {
+    display: flex;
+}
+
+.google-access img {
+    width: 11%;
+    height: 40px;
+    margin: 10px 0 0 0;
+}
+/* ----------------------------------------------------------------- Login register */
+.logo-register {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-register p {
+    color: var(--color6);
+    font-size: 1.6rem;
+}
+
+.remember a, 
+.login-register a {
+    text-decoration: none;
+    color: var(--color1);
+}
+
+.remember a:hover, 
+.login-register a:hover {
+    text-decoration: underline;
+}
+
+
+/* ------------------------------------------------------------------- Help & privacy */
+.help-privacy a{
+    color: var(--color2);
+    margin: 20px;
+    padding-top: 5px;
+    font-size: 1.5rem;
+}
+
+.help-privacy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -30px;
+}
+
+/* ---------------------------------------------------------------------------- formato register */
+.line-register {
+    display: flex;
+}
+
+.form-box-register h2 {
+    font-size: 4rem;
+    font-weight: 400;
+    color: var(--color1);
+}
+
+.input-box-register {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 3px solid var(--color1);
+    border-image-slice: 1;
+    margin: 18px 0;
+}
+
+.input-box-register label {
+    font-size: 1.5rem;
+}
+
+.separated {
+    margin-right: 20px;
+}
+
+
+/* ------- */
+#message-login-email-validator {
+    display: none;
+}
+
+#message-login-email-validator p{
+    color: red;
+    font-size: 1.5rem;
+
+}

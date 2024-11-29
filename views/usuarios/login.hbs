@@ -1,0 +1,53 @@
+<div class="contenedor-chill">    
+            
+ <form  action="/api/auth/login" method="POST" class="login-form" id="login-form">
+            <div class="form-box-login">
+                
+             <img src="/img/logo-empresa.png" alt="logo-empresa">
+ 
+               
+                <div class="input-box">
+                    <span class="icon"><i class="fa-solid fa-user"></i></span>
+                    <input id="lbl-correo" type="text" name="email" required>
+                    <label for="lbl-correo" >USUARIO</label>
+
+                    <!--  -->
+                    <div id="message-login-email-validator">
+                       <p>*Ingresar un correo electrónico valido</p>
+                   </div>
+
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                    <input id="lbl-password" type="password" name="password" required>
+                    <label form="lbl-password" >CONTRASEÑA</label>
+                </div>
+
+                <div class="remember conected">
+                    <label><input type="checkbox">Seguir conectado</label>
+                        <a href="#">¿Olvidaste tu contraseña?</a>
+                </div>
+
+
+                <div class="button-section">
+                    <button type="submit" id="button-access" class="btn btn-inicio">INICIAR SESIÓN</button>
+                    <div class="google-access">
+                        <img src="/img/logo-google.jpg" alt="logo google">
+                        <button type="submit" id="login-google-init" class="btn btn-google">Acceder con Google</button>
+                    </div>
+                </div>
+                
+                <div class="login-register">
+                    <p>¿No tenés cuenta?
+                        <a href="http://localhost:8080/api/auth/register" target="_self" id="register-link" class="register-link">Regístrate</a>
+                    </p>
+                </div>
+
+                <div class="help-privacy">
+                    <a href="#">Ayuda</a>
+                    <a href="#">Privacidad</a>
+                </div>
+        </form>
+         </div>
+        </div>

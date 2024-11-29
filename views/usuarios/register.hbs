@@ -1,0 +1,61 @@
+<div class="contenedor-chill">    
+ <form action="/api/auth/register" method="POST" class="register-form">
+
+                <div class="form-box-register">
+
+                    <div class="logo-register">
+                        <h2>REGISTRO</h2>
+                        <img src="/img/logo-sinTitulo.png" alt="logo-empresa">
+                    </div>
+                        
+                        <div class="line-register">
+                            <div class="input-box-register separated">
+                                <input type="text" name="name"  required>
+                                <label>NOMBRE</label>
+                            </div>
+                            <div class="input-box-register">
+                                <input type="text" name="apellido" required>
+                                <label>APELLIDO</label>
+                            </div>
+                        </div>
+
+                        <div class="input-box-register">
+                            <input type="text" name="email"  required>
+                            <label>CORREO ELECTRÓNICO</label>
+                        </div>
+
+                        <div class="line-register">
+                            <div class="input-box-register separated">
+                                <input type="password" name="password" required>
+                                <label>CONTRASEÑA</label>
+                            </div>
+                            <div class="input-box-register">
+                                <input type="password" name="confirm_password" required>
+                                <label>CONFIRMAR CONTRASEÑA</label>
+                            </div>
+                        </div>
+
+                        <div class="remember">
+                            <label><input type="checkbox">
+                                He leido y acepto los <a href="#">terminos y condiciones</a></label>
+                        </div>
+
+                        <div class="button-section">  
+                            <button type="submit" class="btn btn-inicio"><a href="#" target="_blank" class="enviar-register">REGISTRAR</a></button>
+                        </div>
+
+                        <div class="login-register">
+                            <p>¿Ya tenés cuenta? 
+                                <a href="/api/auth/login" id="login-link" class="login-link">Iniciar sesión</a>
+                                <!-- <button id="login-link" class="login-link">Iniciar sesión</button> -->
+                            </p>
+                        </div>
+
+                        <div class="help-privacy">
+                            <a href="#">Ayuda</a>
+                            <a href="#">Privacidad</a>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
